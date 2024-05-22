@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KufarAPI", "KufarAPI\KufarAPI.csproj", "{A0FEF3D4-42C7-4BB3-B8FF-4DE0C790901F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{BC05FFA4-147B-4DBF-A5CA-8F311A0C3134}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0FEF3D4-42C7-4BB3-B8FF-4DE0C790901F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0FEF3D4-42C7-4BB3-B8FF-4DE0C790901F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0FEF3D4-42C7-4BB3-B8FF-4DE0C790901F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0FEF3D4-42C7-4BB3-B8FF-4DE0C790901F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC05FFA4-147B-4DBF-A5CA-8F311A0C3134}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC05FFA4-147B-4DBF-A5CA-8F311A0C3134}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC05FFA4-147B-4DBF-A5CA-8F311A0C3134}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC05FFA4-147B-4DBF-A5CA-8F311A0C3134}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
