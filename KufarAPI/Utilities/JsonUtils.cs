@@ -136,6 +136,7 @@ public static class JsonUtils
     {
         string? area = null;
         bool? bookingEnabled = null;
+        var bookingCalendar = new List<DateOnly>();
 
         foreach (var paramJson in paramArrayJson)
         {
@@ -151,6 +152,18 @@ public static class JsonUtils
                 area = paramJson["vl"]?.GetValue<string>();
             else if (p == "booking_enabled")
                 bookingEnabled = JsonSerializer.Deserialize<bool>(paramJson["v"]);
+            else if (p == "booking_calendar")
+            {
+                var baseDate = new DateOnly(1970, 1, 1);
+
+                foreach (var item in paramJson["v"].AsArray())
+                {
+                    if (item is JsonValue jsonValue && jsonValue.TryGetValue(out int days))
+                    {
+                        bookingCalendar.Add(baseDate.AddDays(days));
+                    }
+                }
+            }
         }
 
         return !(bookingEnabled.HasValue && !string.IsNullOrEmpty(area))
@@ -158,7 +171,8 @@ public static class JsonUtils
             : new BookingFlatAdParameters()
             {
                 Area = area,
-                BookingEnabled = (bool)bookingEnabled
+                BookingEnabled = (bool)bookingEnabled,
+                BookingCalendar = bookingCalendar
             };
     }
 }

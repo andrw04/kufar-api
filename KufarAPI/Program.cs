@@ -49,6 +49,19 @@ if (bookingAdsJson is not null)
     {
         Console.WriteLine(ad);
     }
+
+    var dates = new DateOnly[]
+    {
+        new(2024, 7, 15),
+    };
+
+    var availableOnDates = Task3.GetBookingFlatsOnDates(filteredAds, dates);
+        
+    WriteGreen($"Квартиры, доступные на выбранные даты:");
+    foreach (var ad in availableOnDates)
+    {
+        Console.WriteLine(ad);
+    }
 }
 
 void WriteGreen(string text)

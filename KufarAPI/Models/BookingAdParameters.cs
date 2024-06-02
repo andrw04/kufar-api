@@ -5,6 +5,8 @@ public record BookingFlatAdParameters
     public string Area { get; set; }
     
     public bool BookingEnabled { get; set; }
+    
+    public List<DateOnly> BookingCalendar { get; set; }
 
     public override string ToString()
     {
